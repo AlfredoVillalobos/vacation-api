@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 5432
+
+development:
+  <<: *default
+  database: vacation_api_v2_development
+  username: <%= Rails.application.credentials.dig(:postgresql, :username) %>
+  password: <%= Rails.application.credentials.dig(:postgresql, :password) %>
+
+test:
+  <<: *default
+  database: vacation_api_v2_test
+  username: <%= Rails.application.credentials.dig(:postgresql, :username) %>
+  password: <%= Rails.application.credentials.dig(:postgresql, :password) %>
+
+production:
+  <<: *default
+  database: vacation_api_v2_production
+  username: <%= Rails.application.credentials.dig(:postgresql, :username) %>
+  password: <%= Rails.application.credentials.dig(:postgresql, :password) %>
+  
