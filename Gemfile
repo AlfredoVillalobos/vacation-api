@@ -53,3 +53,15 @@ gem 'jwt'
 # HTTP client
 gem 'http'
 
+# Roo for excel parsing
+gem 'roo'
+
+
+# kaminari for pagination
+gem 'kaminari'
+
+# pry for debugging
+gem 'pry', '~> 0.14.2'
+
+# dotenv for environment variables
+gem 'dotenv-rails'
