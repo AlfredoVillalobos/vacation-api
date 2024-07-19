@@ -48,9 +48,10 @@ jobs:
         run: bundle exec rails test
       # Add coverage
       - name: Create Coverage Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
+          path: coverage/
 
   lint:
     runs-on: ubuntu-latest
