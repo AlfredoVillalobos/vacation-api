@@ -53,6 +53,4 @@ jobs:
         uses: artplan1/brakeman-action@v1.2.1
         with: 
           flags: "--color"
-      # Add or replace any other lints here
-      - name: Security audit application code
-        run: bin/brakeman -q -w2
+          
