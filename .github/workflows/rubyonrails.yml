@@ -54,7 +54,9 @@ jobs:
         with: 
           flags: "--color"
       - name: Rubocop Linter Action
-        uses: andrewmcodes/rubocop-linter-action@v3.0.0.rc2
+        uses: andrewmcodes/rubocop-linter-action@v3.3.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Add or replace any other lints here
       - name: Security audit application code
         run: bin/brakeman -q -w2
