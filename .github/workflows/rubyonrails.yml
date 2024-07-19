@@ -49,6 +49,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+      - name: Brakeman Linter ACtion
+        uses: artplan1/brakeman-action@v1.2.1
+        with: 
+          flags: "--color"
+      - name: Rubocop Linter Action
+        uses: andrewmcodes/rubocop-linter-action@v3.0.0.rc2
       # Add or replace any other lints here
       - name: Security audit application code
         run: bin/brakeman -q -w2
