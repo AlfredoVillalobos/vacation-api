@@ -48,6 +48,10 @@ group :development do
   gem 'rubocop', require: false
 end
 
+group :test do
+  gem 'simplecov', require: false
+end
+
 
 #JWT encoding & decoding
 gem 'jwt'
